@@ -652,7 +652,7 @@ class TapoMediaSource(MediaSource):
         return BrowseMediaSource(
             domain=DOMAIN,
             identifier=identifier,
-            media_class=MediaClass.DIRECTORY,
+            media_class=MediaClass.VIDEO if can_play and not can_expand else MediaClass.DIRECTORY,
             media_content_type=MediaType.VIDEO,
             title=title,
             can_play=can_play,
